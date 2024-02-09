@@ -1,25 +1,20 @@
 const express = require("express");
 const app = express();
 const mongoose = require('mongoose');
-const Product = require('./models/users')
+const Saying = require('./models/sayings');
+
 
 app.use(express.json())
 
 app.get('/', async(req,res) =>{
-    const product = await Product.find()
-    res.send(product)
+    const saying = await Saying.find()
+    res.send(saying)
 })
 
-app.get('/2', (req,res) =>{
-    res.send("bye lando bye lando, makera shackera fuckera l l lando")
-})
 
-app.post("/testLando" , async (req, res)=>{
-    
-    const product = await Product.create(req.body)
-    res.send(req.body)
 
-})
+
+
 
 
 
@@ -33,4 +28,4 @@ mongoose.connect('mongodb+srv://alsalhe03:LxRbRP4L13a6LaJO@testforrestapi.qwgpm7
         console.log("Running ")
     })
 });
-  
+
