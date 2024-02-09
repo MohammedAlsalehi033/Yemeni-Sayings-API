@@ -1,0 +1,13 @@
+// Using Node.js `require()`
+const mongoose = require('mongoose');
+
+// Using ES6 imports
+import mongoose from 'mongoose';
+
+import { createRequire } from 'https://deno.land/std@0.177.0/node/module.ts';
+const require = createRequire(import.meta.url);
+
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb+srv://alsalhe03:LxRbRP4L13a6LaJO@testforrestapi.qwgpm7l.mongodb.net/NodeAPI?retryWrites=true&w=majority')
+  .then(() => console.log('Connected!'));
