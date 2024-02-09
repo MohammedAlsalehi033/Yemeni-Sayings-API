@@ -29,7 +29,7 @@ app.post("/testLando" , async (req, res)=>{
 mongoose.connect('mongodb+srv://alsalhe03:LxRbRP4L13a6LaJO@testforrestapi.qwgpm7l.mongodb.net/NodeAPI?retryWrites=true&w=majority')
   .then(() => {
     console.log('Connected!')
-    app.listen(3000 , ()=> {
+    app.listen(process.env.PORT ||3000 , ()=> {
         console.log("Running ")
     })
 });
